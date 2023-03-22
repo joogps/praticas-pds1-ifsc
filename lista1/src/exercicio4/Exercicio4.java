@@ -52,11 +52,6 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		panel.add(txt2);
 		panel.add(panel_1);
 		
-		sumButton.setActionCommand("sum");
-		subtractButton.setActionCommand("subtract");
-		multiplyButton.setActionCommand("multiply");
-		divideButton.setActionCommand("divide");
-		
 		sumButton.addActionListener(this);
 		subtractButton.addActionListener(this);
 		multiplyButton.addActionListener(this);
@@ -67,13 +62,13 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		Double value1 = Double.valueOf(txt1.getText());
 		Double value2 = Double.valueOf(txt2.getText());
 		
-        if ("sum".equals(e.getActionCommand())) {
+        if (e.getSource() == sumButton) {
         	displayResult(value1+value2);
-        } else if ("subtract".equals(e.getActionCommand())) {
+        } else if (e.getSource() == subtractButton) {
         	displayResult(value1-value2);
-        } else if ("multiply".equals(e.getActionCommand())) {
+        } else if (e.getSource() == multiplyButton) {
         	displayResult(value1*value2);
-        } else if ("divide".equals(e.getActionCommand())) {
+        } else if (e.getSource() == divideButton) {
         	displayResult(value1/value2);
         } 
     }
