@@ -2,10 +2,6 @@ package exercicio5;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.event.ActionEvent;
