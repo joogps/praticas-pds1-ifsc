@@ -19,7 +19,7 @@ public class Exercicio5 extends JFrame implements ActionListener {
 	
 	public Exercicio5() {
 		// TODO Auto-generated method stub
-		super("Calculadora");
+		super("Triângulos");
 		BorderLayout borderLayout = (BorderLayout) this.getContentPane().getLayout();
 		
 		this.setLocationRelativeTo(null);
