@@ -34,8 +34,9 @@ public class Exercicio6 extends JFrame implements ActionListener {
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
 		
-		JButton verifyButton = new JButton("Verificar");
-		panel_1.add(verifyButton);
+		JButton calcularButton = new JButton("Calcular");
+		calcularButton.addActionListener(this);
+		panel_1.add(calcularButton);
 		
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 		
@@ -68,8 +69,6 @@ public class Exercicio6 extends JFrame implements ActionListener {
 		}
 		
 		panel.add(panel_1);
-		
-		verifyButton.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
