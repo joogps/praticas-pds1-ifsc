@@ -20,14 +20,13 @@ public class Exercicio5 extends JFrame implements ActionListener {
 	public Exercicio5() {
 		// TODO Auto-generated method stub
 		super("Triângulos");
-		BorderLayout borderLayout = (BorderLayout) this.getContentPane().getLayout();
 		
-		this.setLocationRelativeTo(null);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new EmptyBorder(0, 0, 0, 0));
-		this.getContentPane().add(panel, BorderLayout.NORTH);
+		getContentPane().add(panel, BorderLayout.NORTH);
 		
 		txt1 = new JTextField("");
 		txt1.setToolTipText("Lado um");
@@ -50,7 +49,6 @@ public class Exercicio5 extends JFrame implements ActionListener {
 		panel.add(txt3);
 		panel.add(panel_1);
 		
-		verifyButton.setActionCommand("verify");
 		verifyButton.addActionListener(this);
 	}
 	
