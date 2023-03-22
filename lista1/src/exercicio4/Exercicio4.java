@@ -12,8 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Exercicio4 extends JFrame implements ActionListener {
-	private static JTextField txtOne;
-	private static JTextField txtTwo;
+	private static JTextField txt1;
+	private static JTextField txt2;
 
 	public static void main(String[] args) {
 		Exercicio4 frame = new Exercicio4();
@@ -32,11 +32,11 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		panel.setBorder(new EmptyBorder(0, 0, 0, 0));
 		this.getContentPane().add(panel, BorderLayout.NORTH);
 		
-		txtOne = new JTextField("");
-		txtOne.setToolTipText("Número um");
+		txt1 = new JTextField("");
+		txt1.setToolTipText("Número um");
 		
-		txtTwo = new JTextField();
-		txtTwo.setToolTipText("Número um");
+		txt2 = new JTextField();
+		txt2.setToolTipText("Número dois");
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
@@ -54,8 +54,8 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		panel_1.add(divisionButton);
 		
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-		panel.add(txtOne);
-		panel.add(txtTwo);
+		panel.add(txt1);
+		panel.add(txt2);
 		panel.add(panel_1);
 		
 		sumButton.setActionCommand("sum");
@@ -70,8 +70,8 @@ public class Exercicio4 extends JFrame implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		Double value1 = Double.valueOf(txtOne.getText());
-		Double value2 = Double.valueOf(txtTwo.getText());
+		Double value1 = Double.valueOf(txt1.getText());
+		Double value2 = Double.valueOf(txt2.getText());
 		
         if ("sum".equals(e.getActionCommand())) {
         	displayResult(value1+value2);
