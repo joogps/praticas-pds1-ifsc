@@ -1,7 +1,5 @@
 package exercicio3;
 
-import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
 
 public class Exercicio3 {
