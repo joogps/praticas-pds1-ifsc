@@ -8,8 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Exercicio4 extends JFrame implements ActionListener {
-	private static JTextField txt1;
-	private static JTextField txt2;
+	private static JTextField txt1, txt2;
+	private static JButton sumButton, subtractButton, multiplyButton, divideButton;
 
 	public static void main(String[] args) {
 		Exercicio4 frame = new Exercicio4();
@@ -17,16 +17,14 @@ public class Exercicio4 extends JFrame implements ActionListener {
 	}
 	
 	public Exercicio4() {
-		// TODO Auto-generated method stub
 		super("Calculadora");
-		BorderLayout borderLayout = (BorderLayout) this.getContentPane().getLayout();
 		
-		this.setLocationRelativeTo(null);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new EmptyBorder(0, 0, 0, 0));
-		this.getContentPane().add(panel, BorderLayout.NORTH);
+		getContentPane().add(panel, BorderLayout.NORTH);
 		
 		txt1 = new JTextField("");
 		txt1.setToolTipText("Número um");
@@ -37,17 +35,17 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
 		
-		JButton sumButton = new JButton("+ Soma");
+		sumButton = new JButton("+ Soma");
 		panel_1.add(sumButton);
 		
-		JButton subtractButton = new JButton("- Subtração");
+		subtractButton = new JButton("- Subtração");
 		panel_1.add(subtractButton);
 		
-		JButton multiplyButton = new JButton("× Multiplicação");
+		multiplyButton = new JButton("× Multiplicação");
 		panel_1.add(multiplyButton);
 		
-		JButton divisionButton = new JButton("÷ Divisão");
-		panel_1.add(divisionButton);
+		divideButton = new JButton("÷ Divisão");
+		panel_1.add(divideButton);
 		
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 		panel.add(txt1);
@@ -57,12 +55,12 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		sumButton.setActionCommand("sum");
 		subtractButton.setActionCommand("subtract");
 		multiplyButton.setActionCommand("multiply");
-		divisionButton.setActionCommand("divide");
+		divideButton.setActionCommand("divide");
 		
 		sumButton.addActionListener(this);
 		subtractButton.addActionListener(this);
 		multiplyButton.addActionListener(this);
-		divisionButton.addActionListener(this);
+		divideButton.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
@@ -80,8 +78,8 @@ public class Exercicio4 extends JFrame implements ActionListener {
         } 
     }
 	
-	public static void displayResult(Double result) {
-		JOptionPane.showMessageDialog(null, "O resultado é "+result);
+	public void displayResult(Double result) {
+		JOptionPane.showMessageDialog(this, "O resultado é "+result);
 	}
 
 }
