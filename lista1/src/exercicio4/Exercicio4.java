@@ -47,15 +47,15 @@ public class Exercicio4 extends JFrame implements ActionListener {
 		divideButton = new JButton("÷ Divisão");
 		panel_1.add(divideButton);
 		
-		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-		panel.add(txt1);
-		panel.add(txt2);
-		panel.add(panel_1);
-		
 		sumButton.addActionListener(this);
 		subtractButton.addActionListener(this);
 		multiplyButton.addActionListener(this);
 		divideButton.addActionListener(this);
+		
+		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+		panel.add(txt1);
+		panel.add(txt2);
+		panel.add(panel_1);
 	}
 	
 	public void actionPerformed(ActionEvent e) {

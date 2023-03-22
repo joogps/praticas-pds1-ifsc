@@ -41,6 +41,7 @@ public class Exercicio5 extends JFrame implements ActionListener {
 		panel_1.setLayout(new BoxLayout(panel_1, BoxLayout.X_AXIS));
 		
 		JButton verifyButton = new JButton("Verificar");
+		verifyButton.addActionListener(this);
 		panel_1.add(verifyButton);
 		
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
@@ -48,8 +49,6 @@ public class Exercicio5 extends JFrame implements ActionListener {
 		panel.add(txt2);
 		panel.add(txt3);
 		panel.add(panel_1);
-		
-		verifyButton.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
