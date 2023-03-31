@@ -94,8 +94,6 @@ public class CadastroPessoaFrame extends JFrame implements ActionListener {
 			txtCadastrada.setEnabled(false);
 			txtCadastrada.setEditable(false);
 			
-		    txtCadastrada.setPreferredSize(new Dimension(80,20));
-			
 			cadastradaPanel.add(lblCadastrada);
 			cadastradaPanel.add(txtCadastrada);
 			
