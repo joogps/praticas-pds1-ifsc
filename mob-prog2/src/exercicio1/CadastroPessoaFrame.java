@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Component;
 
+// Equipe: João Gabriel Pozzobon dos Santos
+
 public class CadastroPessoaFrame extends JFrame implements ActionListener {
 		private static JLabel lblCPF, lblFirstName, lblSurname, lblBirthdate, lblCadastrada;
 		private static JTextField txtCPF, txtFirstName, txtSurname, txtBirthdate, txtCadastrada;
