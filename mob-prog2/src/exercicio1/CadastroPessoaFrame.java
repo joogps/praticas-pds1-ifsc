@@ -116,6 +116,6 @@ public class CadastroPessoaFrame extends JFrame implements ActionListener {
 			pessoa.setSurname(txtSurname.getText());
 			pessoa.setBirthdate(txtBirthdate.getText());
 			
-			txtCadastrada.setText(pessoa.description());
+			txtCadastrada.setText(pessoa.toString());
 	    }
 }

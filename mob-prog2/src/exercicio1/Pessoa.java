@@ -31,7 +31,8 @@ public class Pessoa {
 		this.birthdate = birthdate;
 	}
 	
-	public String description() {
+	@Override
+	public String toString() {
 		return this.firstName + " " + this.surname + ", " + this.cpf + " – " + this.birthdate;
 	}
 }
